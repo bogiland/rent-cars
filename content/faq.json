@@ -1,0 +1,44 @@
+{
+  "faq": [
+    {
+      "id": "insurance",
+      "q": "What's included in the insurance?",
+      "a": "Every rental includes full CASCO + RCA coverage at no extra cost. Theft, third-party damage and roadside assistance are covered. No optional packages, no upsells — the price you see is what you pay."
+    },
+    {
+      "id": "deposit",
+      "q": "How much is the security deposit?",
+      "a": "€200 for Economy and Sedan, €350 for SUV and Crossover, €500 for Premium SUV. Held against the card on pickup, fully released within 24 hours of return."
+    },
+    {
+      "id": "delivery",
+      "q": "How does free delivery work?",
+      "a": "Free delivery anywhere in Nicosia and at Larnaca International Airport (LCA). For deliveries outside the city, we charge €0.40 / km from city center. Available 24/7."
+    },
+    {
+      "id": "cancellation",
+      "q": "Can I cancel or change my booking?",
+      "a": "Free cancellation up to 24 hours before pickup — full refund, no questions. Inside 24 hours: 50% refund. Date changes are free at any time, subject to availability."
+    },
+    {
+      "id": "documents",
+      "q": "What documents do I need?",
+      "a": "Valid passport or national ID, valid driver's license held for at least 2 years, and a credit or debit card in the driver's name for the deposit. International licenses accepted."
+    },
+    {
+      "id": "age",
+      "q": "What's the minimum age?",
+      "a": "Drivers must be at least 21 years old with 2+ years of driving experience. No surcharge for young drivers. Multiple drivers can be added free of charge."
+    },
+    {
+      "id": "mileage",
+      "q": "Is there a mileage limit?",
+      "a": "300 km per day included. Beyond that, €0.20/km. Weekly and monthly rentals come with unlimited mileage in Cyprus at no extra cost."
+    },
+    {
+      "id": "abroad",
+      "q": "Can I drive across the whole island?",
+      "a": "Yes — drive anywhere in the Republic of Cyprus: Nicosia, Limassol, Larnaca, Paphos, Ayia Napa, the Troodos mountains. Crossing into Northern Cyprus is not covered by insurance and is not permitted with rental cars."
+    }
+  ]
+}

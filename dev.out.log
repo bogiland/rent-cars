@@ -1,0 +1,35 @@
+
+> apex-auto-portfolio@0.1.0 dev
+> node scripts/sync-car-photos.mjs && next dev
+
+[photos] synced 0 local car photo(s) -> content/local-photos.json
+   ▲ Next.js 15.5.19
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.100.61:3000
+   - Experiments (use with caution):
+     · optimizePackageImports
+
+ ✓ Starting...
+ ✓ Ready in 3.8s
+ ○ Compiling / ...
+ ✓ Compiled / in 6.4s (943 modules)
+ GET / 200 in 7998ms
+ GET / 200 in 740ms
+ ✓ Compiled in 736ms (925 modules)
+ GET / 200 in 343ms
+ ✓ Compiled in 707ms (925 modules)
+ GET / 200 in 179ms
+ ✓ Compiled in 600ms (925 modules)
+ GET / 200 in 171ms
+ ✓ Compiled in 1017ms (925 modules)
+ GET / 200 in 288ms
+ ✓ Compiled in 521ms (925 modules)
+ GET / 200 in 267ms
+ ✓ Compiled in 462ms (925 modules)
+ GET / 200 in 218ms
+ GET / 200 in 753ms
+ GET / 200 in 587ms
+ GET / 200 in 543ms
+ GET / 200 in 581ms
+ ✓ Compiled in 1711ms (925 modules)
+ GET / 200 in 502ms

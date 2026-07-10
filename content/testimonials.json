@@ -1,0 +1,69 @@
+{
+  "aggregate": {
+    "rating": 4.8,
+    "count": 1247,
+    "sources": ["Google", "Trustpilot", "Booking.com"]
+  },
+  "testimonials": [
+    {
+      "id": "t1",
+      "name": "James Whitmore",
+      "initials": "JW",
+      "country": "United Kingdom",
+      "rating": 5,
+      "source": "Google",
+      "date": "2 weeks ago",
+      "text": "Picked up the BMW X5 at the airport — concierge was waiting with the keys. No paperwork drama, no upselling. Car was spotless and exactly as photographed. Best rental experience I've had in three years of business travel."
+    },
+    {
+      "id": "t2",
+      "name": "Sofia Reinhardt",
+      "initials": "SR",
+      "country": "Germany",
+      "rating": 5,
+      "source": "Trustpilot",
+      "date": "1 month ago",
+      "text": "Booked the GLE Coupé for a week. Free delivery to my hotel, full tank, and they called to confirm 24h before. Deposit returned the same day I dropped off. Will rent again on my next trip."
+    },
+    {
+      "id": "t3",
+      "name": "Andrei Mocanu",
+      "initials": "AM",
+      "country": "Romania",
+      "rating": 5,
+      "source": "Google",
+      "date": "3 weeks ago",
+      "text": "Needed a car for a family trip on short notice. Confirmed in 12 minutes by WhatsApp, delivered the Touareg the next morning. Two child seats included free. Price exactly what was quoted — zero hidden fees."
+    },
+    {
+      "id": "t4",
+      "name": "Liam O'Connor",
+      "initials": "LO",
+      "country": "Ireland",
+      "rating": 4,
+      "source": "Trustpilot",
+      "date": "1 week ago",
+      "text": "Rented the Porsche Cayenne for a weekend getaway. Car was immaculate. Only minor note: confirmation email took an hour, but the WhatsApp team responded instantly. Otherwise flawless."
+    },
+    {
+      "id": "t5",
+      "name": "Elena Volkova",
+      "initials": "EV",
+      "country": "Latvia",
+      "rating": 5,
+      "source": "Booking.com",
+      "date": "2 months ago",
+      "text": "Third time renting with Apex. Same level of service every single time. They remember preferences, deliver on time, and the fleet is always in top condition. This is what premium actually means."
+    },
+    {
+      "id": "t6",
+      "name": "Marco Bianchi",
+      "initials": "MB",
+      "country": "Italy",
+      "rating": 5,
+      "source": "Google",
+      "date": "5 days ago",
+      "text": "Hyundai Tucson for two weeks. €40/day was honest — no airport fee, no insurance upsell, no fuel deposit games. Got the full security deposit back within 24 hours of return. Recommend."
+    }
+  ]
+}

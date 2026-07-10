@@ -1,0 +1,64 @@
+{
+  "reels": [
+    {
+      "id": "r1",
+      "slug": "lamborghini-urus-2024",
+      "brand": "Lamborghini",
+      "model": "Urus 2024",
+      "pricePerDay": 1290,
+      "oldPricePerDay": 1548,
+      "poster": "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?w=600&q=85&auto=format&fit=crop",
+      "videoUrl": "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?w=1200&q=85&auto=format&fit=crop"
+    },
+    {
+      "id": "r2",
+      "slug": "rolls-royce-cullinan",
+      "brand": "Rolls-Royce",
+      "model": "Cullinan Black Badge",
+      "pricePerDay": 2100,
+      "oldPricePerDay": 2520,
+      "poster": "https://images.unsplash.com/photo-1631297868264-e536271154f0?w=600&q=85&auto=format&fit=crop",
+      "videoUrl": "https://images.unsplash.com/photo-1631297868264-e536271154f0?w=1200&q=85&auto=format&fit=crop"
+    },
+    {
+      "id": "r3",
+      "slug": "porsche-cayenne-2021",
+      "brand": "Porsche",
+      "model": "Cayenne Turbo GT",
+      "pricePerDay": 680,
+      "oldPricePerDay": 816,
+      "poster": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=85&auto=format&fit=crop",
+      "videoUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=85&auto=format&fit=crop"
+    },
+    {
+      "id": "r4",
+      "slug": "bmw-x6-2024",
+      "brand": "BMW",
+      "model": "X6 M Competition",
+      "pricePerDay": 420,
+      "oldPricePerDay": 504,
+      "poster": "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=600&q=85&auto=format&fit=crop",
+      "videoUrl": "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=1200&q=85&auto=format&fit=crop"
+    },
+    {
+      "id": "r5",
+      "slug": "mercedes-gle-coupe-2021",
+      "brand": "Mercedes-Benz",
+      "model": "GLE 53 Coupé AMG",
+      "pricePerDay": 390,
+      "oldPricePerDay": 468,
+      "poster": "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600&q=85&auto=format&fit=crop",
+      "videoUrl": "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=1200&q=85&auto=format&fit=crop"
+    },
+    {
+      "id": "r6",
+      "slug": "corvette-c8",
+      "brand": "Chevrolet",
+      "model": "Corvette C8 Stingray",
+      "pricePerDay": 350,
+      "oldPricePerDay": 420,
+      "poster": "https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=600&q=85&auto=format&fit=crop",
+      "videoUrl": "https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=1200&q=85&auto=format&fit=crop"
+    }
+  ]
+}

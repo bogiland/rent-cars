@@ -1,0 +1,309 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Apex Auto — Design System
+   Light minimalist (OneClickDrive-style) with #D74B05 accent.
+   ============================================================ */
+
+/* Register fluid type scale as REAL Tailwind utilities (text-xs … text-6xl).
+   This is the Tailwind v4 way — overrides defaults so text-6xl = our clamp(). */
+@theme {
+  /* Compact, restrained scale — OneClickDrive-style. Deliberately small; OCD
+     renders text tighter than most templates, so headings stay modest. */
+  --text-xs:   0.6875rem;  /* 11px — small labels */
+  --text-sm:   0.75rem;    /* 12px — old price, meta */
+  --text-base: 0.8125rem;  /* 13px — body / nav / section desc */
+  --text-lg:   0.9375rem;  /* 15px — car name */
+  --text-xl:   1.0625rem;  /* 17px — new price */
+  --text-2xl:  1.1875rem;  /* 19px — H2 mobile */
+  --text-3xl:  clamp(1.1875rem, 0.98rem + 0.9vw, 1.375rem); /* 19 → 22px — section H2 */
+  --text-4xl:  clamp(1.375rem, 1.12rem + 1.05vw, 1.625rem); /* 22 → 26px */
+  --text-5xl:  clamp(1.5rem, 1.05rem + 1.9vw, 2.125rem);    /* 24 → 34px — hero H1 */
+  --text-6xl:  2.125rem;   /* 34px cap */
+}
+
+:root,
+[data-theme="light"] {
+  /* ── RAW layer (spec tokens) ── */
+  --accent-deep: #cc4700;    /* buttons, active tabs, PRICE */
+  --accent-bright: #ed8413;  /* CTA borders, icons, name-links, "#1" */
+  --text-heading: #373737;
+  --text-body: #4d4d4d;
+  --text-muted: #565656;
+  --text-strike: #595959;    /* struck old price */
+  --text-faint: #a2a2a2;     /* footer column labels */
+  --border-card: rgba(0,0,0,0.1);
+  --border-soft: rgba(206,206,206,0.42);
+  --border-chip: rgba(0,0,0,0.09);
+
+  /* ── SEMANTIC layer (consumed by components) ── */
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-2: #f7f7f4;
+  --color-surface-3: #efeeea;
+  --color-topbar: #f6ece1;               /* warm copper-tinted white utility strip */
+  --color-topbar-border: #ecdccb;
+  --color-recommend-bg: #b8e6dd;         /* turquoise behind recommended cards */
+  --color-recommend-border: #8fd6c8;
+  --color-loadbar: var(--accent-deep);   /* global top page-load progress line */
+  --color-border: var(--border-card);
+  --color-border-soft: var(--border-soft);
+  --color-border-strong: var(--border-chip);
+  --color-fg: var(--text-heading);       /* headings */
+  --color-fg-body: var(--text-body);     /* running text */
+  --color-fg-muted: var(--text-muted);
+  --color-fg-dim: var(--text-strike);    /* struck price / meta */
+  --color-fg-faint: var(--text-faint);
+  --color-accent: var(--accent-deep);    /* price, primary actions */
+  --color-accent-bright: var(--accent-bright);
+  --color-accent-fg: #ffffff;
+  --color-accent-hover: #b33e00;
+  --color-accent-soft: rgba(204,71,0,0.08);
+  --color-cta: var(--accent-deep);
+  --color-cta-fg: #ffffff;
+  --color-cta-hover: #b33e00;
+  --color-overlay: rgba(15,15,15,0.45);
+  --color-danger: #c52828;
+  --color-success: #25a760;              /* WhatsApp green */
+  --color-input-bg: #ffffff;
+  --color-input-border: var(--border-card);
+  --color-input-focus: rgba(204,71,0,0.35);
+  --color-star: #f5b81c;
+  --color-footer-bg: #161616;
+  /* Contact-brand colors (OCD-style outlined CTAs) */
+  --color-call: #7c5cfc;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-fg: #1da851;
+
+  /* Depth via borders, not shadows. Card hover is the only real shadow. */
+  --shadow-card: none;
+  --shadow-card-hover: 0 4px 16px rgba(0,0,0,0.08);
+  --shadow-elevated: 0 4px 16px rgba(0,0,0,0.08);
+  --shadow-sticky: 0 -1px 0 rgba(0,0,0,0.06), 0 -8px 24px rgba(0,0,0,0.06);
+}
+
+[data-theme="dark"] {
+  --color-bg: #0a0a0a;
+  --color-surface: #141414;
+  --color-surface-2: #1c1c1c;
+  --color-surface-3: #242424;
+  --color-border: rgba(255,255,255,0.07);
+  --color-border-strong: rgba(255,255,255,0.14);
+  --color-fg: #f0ece2;
+  --color-fg-muted: #a8a395;
+  --color-fg-dim: #6f6c63;
+  --color-accent: #d74b05;
+  --color-accent-fg: #ffffff;
+  --color-accent-hover: #b83c04;
+  --color-accent-soft: rgba(215,75,5,0.12);
+  --color-cta: #d74b05;
+  --color-cta-fg: #ffffff;
+  --color-cta-hover: #ed5818;
+  --color-overlay: rgba(0,0,0,0.55);
+  --color-danger: #d04848;
+  --color-success: #6f9a6f;
+  --color-input-bg: rgba(255,255,255,0.04);
+  --color-input-border: rgba(255,255,255,0.10);
+  --color-input-focus: rgba(215,75,5,0.4);
+  --color-star: #f5b81c;
+
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.5), 0 8px 24px rgba(0,0,0,0.4);
+  --shadow-elevated: 0 24px 60px rgba(0,0,0,0.7);
+  --shadow-sticky: 0 -1px 0 rgba(255,255,255,0.05), 0 -12px 32px rgba(0,0,0,0.5);
+}
+
+:root {
+  /* Display = Satoshi (characterful), Body = DM Sans (calm). Distinct faces. */
+  --font-display: var(--font-display-src), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: var(--font-body-src), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 2.5rem;
+  --space-6: 3rem;
+  --space-8: 4rem;
+  --space-10: 5rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+  --space-20: 10rem;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;        /* buttons, inputs */
+  --radius-card: 12px;     /* cards */
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-cta: 28px;      /* CTA pill (View All Cars) */
+  --radius-pill: 50px;     /* tab pill, heart badge */
+  --radius-full: 9999px;
+
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --dur-fast: 180ms;
+  --dur-base: 500ms;
+  --dur-slow: 800ms;
+
+  --container-max: 1120px;
+  --container-px: clamp(1rem, 2.5vw, 1.5rem);
+
+  --sticky-bar-h: 72px;
+}
+
+/* Universal reset MUST live in @layer base — unlayered it would override
+   every margin utility (mt-*, mb-*) site-wide. */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; margin: 0; }
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+[data-theme="dark"] { color-scheme: dark; }
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg-body);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  min-height: 100dvh;
+}
+
+/* Mobile-only padding for sticky book bar — no empty space on desktop */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: calc(var(--sticky-bar-h) + env(safe-area-inset-bottom));
+  }
+}
+
+/* Tabular figures for prices — struck/new prices never jitter. */
+.tnum { font-feature-settings: "tnum" 1; font-variant-numeric: tabular-nums; }
+
+/* Element resets in @layer base so Tailwind utilities (bg-*, text-*, font-*)
+   always win. Heading defaults MUST live here too — an unlayered h1–h6 rule
+   beats layered utilities, which silently killed text-white/font-bold on <h1>. */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--color-fg);
+    letter-spacing: 0;
+    line-height: 1.12;
+    font-weight: 600;         /* section-heading baseline; H1 overrides to 700 */
+    font-feature-settings: "ss01";
+  }
+  a { color: inherit; text-decoration: none; }
+  img, video { display: block; max-width: 100%; }
+  button { cursor: pointer; border: none; background: none; font: inherit; }
+  input, select, textarea { font: inherit; }
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-accent-fg);
+}
+
+/* @layer base so component-level focus-visible:outline-none utilities (in the
+   utilities layer) can still win — unlayered rules would beat them regardless
+   of specificity and break custom focus rings like the hero search pill. */
+@layer base {
+  :where(a,button,input,select,textarea,[tabindex]):focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-px);
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Lightbox photo grows in when opened / when switching slides */
+@keyframes lightbox-in {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.animate-lightbox-in { animation: lightbox-in var(--dur-base, 320ms) var(--ease-premium); }
+
+@keyframes premium-reveal-in {
+  from { opacity: 0; transform: translateY(18px) scale(0.975); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes city-menu-in {
+  from { transform: translateY(8px) scale(0.8); }
+  to { transform: translateY(0) scale(1); }
+}
+
+.animate-premium-reveal {
+  animation: premium-reveal-in 720ms var(--ease-premium) both;
+}
+
+.animate-premium-reveal-delay-1 { animation-delay: 90ms; }
+.animate-premium-reveal-delay-2 { animation-delay: 160ms; }
+.animate-premium-reveal-delay-3 { animation-delay: 230ms; }
+
+/* Global top page-load bar */
+@keyframes loadbar-indeterminate {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-lightbox-in { animation: none; }
+  .animate-premium-reveal,
+  .animate-premium-reveal-delay-1,
+  .animate-premium-reveal-delay-2,
+  .animate-premium-reveal-delay-3 { animation: none; }
+}
+
+/* Dual-range slider (filter drawer). Track is drawn by the wrapper; only the
+   thumbs receive pointer events so two stacked inputs don't fight for clicks. */
+.range-thumb { -webkit-appearance: none; appearance: none; }
+.range-thumb:focus-visible { outline: none; }
+.range-thumb::-webkit-slider-runnable-track { background: transparent; height: 100%; }
+.range-thumb::-moz-range-track { background: transparent; }
+.range-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: auto;
+  height: 18px; width: 18px;
+  border-radius: var(--radius-full);
+  background: #fff;
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+.range-thumb::-moz-range-thumb {
+  pointer-events: auto;
+  height: 18px; width: 18px;
+  border-radius: var(--radius-full);
+  background: #fff;
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+.range-thumb:focus-visible::-webkit-slider-thumb { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.range-thumb:focus-visible::-moz-range-thumb { outline: 2px solid var(--color-accent); outline-offset: 2px; }

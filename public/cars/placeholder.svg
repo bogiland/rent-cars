@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Car placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c1c1c"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a3530"/>
+      <stop offset="100%" stop-color="#1a1814"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <ellipse cx="400" cy="430" rx="280" ry="14" fill="#000" opacity="0.45"/>
+  <!-- car silhouette -->
+  <path d="M120 350 Q160 270 240 250 L320 240 Q380 200 460 198 L560 200 Q620 210 660 240 L720 270 Q740 290 730 330 L730 360 Q720 380 700 380 L660 380 Q650 410 615 410 Q580 410 570 380 L230 380 Q220 410 185 410 Q150 410 140 380 L110 380 Q100 380 100 360 Z" fill="url(#body)"/>
+  <!-- windows -->
+  <path d="M260 250 Q320 220 380 218 L500 218 Q570 230 610 255 L540 270 L300 270 Z" fill="#0d0d0d" opacity="0.85"/>
+  <!-- wheels -->
+  <circle cx="220" cy="385" r="36" fill="#0a0a0a" stroke="#5a544c" stroke-width="3"/>
+  <circle cx="220" cy="385" r="14" fill="#2a2622"/>
+  <circle cx="600" cy="385" r="36" fill="#0a0a0a" stroke="#5a544c" stroke-width="3"/>
+  <circle cx="600" cy="385" r="14" fill="#2a2622"/>
+  <!-- highlight -->
+  <path d="M260 250 Q320 220 380 218 L420 220 Q360 235 320 255 Z" fill="#fff" opacity="0.06"/>
+  <text x="400" y="470" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#6f6c66" letter-spacing="3">APEX AUTO</text>
+</svg>

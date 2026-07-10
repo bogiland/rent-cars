@@ -1,0 +1,56 @@
+{
+  "brand": {
+    "name": "Apex Auto",
+    "tagline": "Premium car rental in Cyprus.",
+    "description": "Premium car rental in Nicosia, Cyprus — a curated fleet of SUVs, sedans and crossovers. Free delivery, full insurance, 24/7 concierge.",
+    "domain": "apex-auto.example",
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "phone": "+357 99 000 000",
+    "phoneDisplay": "+357 99 000 000",
+    "email": "concierge@apex-auto.example",
+    "address": {
+      "street": "Makarios Avenue 1",
+      "city": "Nicosia",
+      "country": "Cyprus",
+      "postalCode": "1065"
+    },
+    "geo": { "lat": 35.1856, "lng": 33.3823 },
+    "hours": "24/7",
+    "social": {
+      "instagram": "https://instagram.com/apex.auto",
+      "telegram": "https://t.me/apex_auto",
+      "whatsapp": "https://wa.me/35799000000",
+      "viber": "viber://chat?number=%2B35799000000"
+    },
+    "usps": [
+      { "label": "Premium fleet", "value": "30+ vehicles" },
+      { "label": "Free delivery", "value": "Nicosia & airports" },
+      { "label": "Full coverage", "value": "Full insurance" },
+      { "label": "Concierge", "value": "24 / 7" }
+    ],
+    "carBrands": ["BMW", "Mercedes-Benz", "Audi", "Porsche", "Volkswagen", "Hyundai", "Kia", "Lexus", "Renault", "Haval"],
+    "paymentMethods": ["Visa", "Mastercard", "Apple Pay", "Google Pay", "Bank transfer"],
+    "microTrust": [
+      "No hidden fees",
+      "Free cancellation up to 24h",
+      "Instant confirmation",
+      "Same-day deposit refund"
+    ],
+    "whatsappNumber": "35799000000",
+    "policies": {
+      "minAge": 21,
+      "minLicenseYears": 2,
+      "dailyKmLimit": 300,
+      "depositMinEur": 200,
+      "depositMaxEur": 500
+    }
+  },
+  "locations": [
+    { "id": "nicosia-city", "label": "Nicosia (city delivery)", "free": true },
+    { "id": "larnaca-airport", "label": "Larnaca Airport (LCA)", "free": true },
+    { "id": "paphos-airport", "label": "Paphos Airport (PFO)", "free": false },
+    { "id": "limassol", "label": "Limassol", "free": false },
+    { "id": "custom", "label": "Custom address", "free": false }
+  ]
+}
