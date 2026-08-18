@@ -29,7 +29,10 @@ export function CategoriesGrid() {
   const visible = showAll ? CATEGORIES : CATEGORIES.slice(0, 10);
 
   return (
-    <section className="pt-9 pb-6 md:pt-12 md:pb-8" aria-labelledby="categories-heading">
+    <section
+      className="pt-9 pb-6 md:pt-12 md:pb-8"
+      aria-labelledby="categories-heading"
+    >
       {/* Tighter, shrinking side padding on small screens (OCD-style edge-to-edge feel) */}
       <div className="container">
         <div className="relative mb-6 text-left md:mb-8">
@@ -49,14 +52,14 @@ export function CategoriesGrid() {
                 size={14}
                 className={cn(
                   "transition-transform duration-[1000ms] ease-[var(--ease-premium)]",
-                  cityOpen && "rotate-180"
+                  cityOpen && "rotate-180",
                 )}
               />
               <span
                 aria-hidden
                 className={cn(
                   "absolute -bottom-px left-0 h-px bg-[var(--color-accent-bright)] transition-[width] duration-[1000ms] ease-[var(--ease-premium)]",
-                  cityOpen ? "w-full opacity-100" : "w-0 opacity-0"
+                  cityOpen ? "w-full opacity-100" : "w-0 opacity-0",
                 )}
               />
             </button>
@@ -64,7 +67,10 @@ export function CategoriesGrid() {
 
           {cityOpen && (
             <>
-              <div className="fixed inset-0 z-20" onClick={() => setCityOpen(false)} />
+              <div
+                className="fixed inset-0 z-20"
+                onClick={() => setCityOpen(false)}
+              />
               <div className="absolute left-0 top-[calc(100%+12px)] z-30 w-[min(540px,calc(100vw-2rem))] origin-top scale-100 rounded-[8px] border border-[var(--color-border)] bg-white p-5 shadow-[var(--shadow-elevated)] animate-[city-menu-in_1000ms_var(--ease-premium)_both] md:left-[9.5rem]">
                 <p className="mb-2 text-xs font-medium uppercase text-[var(--color-fg)]">
                   Search your city
@@ -77,9 +83,17 @@ export function CategoriesGrid() {
                     className="min-w-0 flex-1 bg-transparent text-sm text-[var(--color-fg)] outline-none placeholder:text-[var(--color-fg-muted)]"
                   />
                 </label>
-                <p className="mb-3 text-sm font-semibold text-[var(--color-fg)]">Cyprus</p>
+                <p className="mb-3 text-sm font-semibold text-[var(--color-fg)]">
+                  Cyprus
+                </p>
                 <div className="grid grid-cols-2 gap-x-10 gap-y-3 text-sm text-[var(--color-fg-muted)] sm:grid-cols-3">
-                  {["Nicosia", "Limassol", "Larnaca", "Paphos", "Ayia Napa"].map((city) => (
+                  {[
+                    "Nicosia",
+                    "Limassol",
+                    "Larnaca",
+                    "Paphos",
+                    "Ayia Napa",
+                  ].map((city) => (
                     <Link
                       key={city}
                       href={`/rent-a-car-cyprus?location=${encodeURIComponent(city.toLowerCase().replaceAll(" ", "-"))}`}
@@ -104,7 +118,7 @@ export function CategoriesGrid() {
         {/* Phone: 3×3 (9 tiles). md+: 5 cols. Images + gaps ~30% smaller than before
             and fluid via clamp() — they grow/shrink with the viewport. */}
         <ul
-          className="mx-auto grid max-w-[1060px] grid-cols-3 gap-x-[clamp(1rem,3.2vw,4.2rem)] gap-y-[clamp(1.65rem,3vw,2.35rem)] md:grid-cols-5"
+          className="mx-auto grid max-w-[1060px] grid-cols-3 gap-x-[clamp(0.6rem,2.5vw,3.5rem)] gap-y-[clamp(1.2rem,3vw,2.2rem)] md:grid-cols-5"
           role="list"
         >
           {visible.map((cat, index) => {
@@ -119,7 +133,11 @@ export function CategoriesGrid() {
                   ? "/rent-a-car-cyprus"
                   : `/rent-a-car-cyprus?cat=${encodeURIComponent(cat.slug)}`;
             const imageCategory =
-              cat.slug === "driver" ? "Luxury" : cat.slug === "monthly" ? "Sedan" : cat.slug;
+              cat.slug === "driver"
+                ? "Luxury"
+                : cat.slug === "monthly"
+                  ? "Sedan"
+                  : cat.slug;
 
             return (
               <li
@@ -128,12 +146,15 @@ export function CategoriesGrid() {
                   "animate-premium-reveal",
                   index % 3 === 1 && "animate-premium-reveal-delay-1",
                   index % 3 === 2 && "animate-premium-reveal-delay-2",
-                  !showAll && index === 9 ? "hidden md:block" : undefined
+                  !showAll && index === 9 ? "hidden md:block" : undefined,
                 )}
               >
-                <Link href={href} className="group flex flex-col items-center text-center">
+                <Link
+                  href={href}
+                  className="group flex flex-col items-center text-center"
+                >
                   {/* OCD-style: the cutout car floats on the page — no card box, just the photo */}
-                  <div className="relative mx-auto mb-2 aspect-[2.1/1] w-[82%] md:w-[68%]">
+                  <div className="relative mx-auto mb-2 aspect-[2.1/1] w-[82%] lg:w-[90%]">
                     {/* Soft contact shadow so the cutout car is grounded, not floating */}
                     <span
                       aria-hidden
@@ -143,14 +164,14 @@ export function CategoriesGrid() {
                       src={getCategoryImage(imageCategory)}
                       alt={cat.label}
                       fill
-                      sizes="(min-width: 1024px) 135px, (min-width: 768px) 12vw, 22vw"
+                      sizes="(min-width: 1024px) 170px, (min-width: 768px) 14vw, 22vw"
                       className="object-contain object-bottom transition-transform duration-[var(--dur-base)] ease-[var(--ease-premium)] group-hover:scale-[1.06]"
                     />
                   </div>
-                  <p className="text-[11px] font-bold uppercase leading-tight tracking-[0] text-[var(--color-fg)] transition-colors group-hover:text-[var(--color-accent)] md:text-xs">
+                  <p className="text-[11px] font-bold uppercase leading-tight tracking-[0] text-[var(--color-fg)] transition-colors group-hover:text-[var(--color-accent)] lg:text-[14px]">
                     {cat.label}
                   </p>
-                  <p className="mt-0.5 text-[10px] leading-none text-[var(--color-fg-muted)] md:text-[11px]">
+                  <p className="mt-0.5 text-[10px] leading-none text-[var(--color-fg-muted)] lg:text-[11px]">
                     {Math.max(count, cat.slug === "driver" ? 6 : 1)} Cars
                   </p>
                 </Link>
