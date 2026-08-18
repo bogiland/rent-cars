@@ -154,7 +154,7 @@ export function CategoriesGrid() {
                   className="group flex flex-col items-center text-center"
                 >
                   {/* OCD-style: the cutout car floats on the page — no card box, just the photo */}
-                  <div className="relative mx-auto mb-2 aspect-[2.1/1] w-[82%] lg:w-[90%]">
+                  <div className="relative mx-auto mb-2 aspect-[2.1/1] w-[72%] md:w-[80%] lg:w-[90%]">
                     {/* Soft contact shadow so the cutout car is grounded, not floating */}
                     <span
                       aria-hidden
@@ -168,10 +168,10 @@ export function CategoriesGrid() {
                       className="object-contain object-bottom transition-transform duration-[var(--dur-base)] ease-[var(--ease-premium)] group-hover:scale-[1.06]"
                     />
                   </div>
-                  <p className="text-[11px] font-bold uppercase leading-tight tracking-[0] text-[var(--color-fg)] transition-colors group-hover:text-[var(--color-accent)] lg:text-[14px]">
+                  <p className="text-[10px] font-bold uppercase leading-tight tracking-[0] text-[var(--color-fg)] transition-colors group-hover:text-[var(--color-accent)] md:text-[11px] lg:text-[14px]">
                     {cat.label}
                   </p>
-                  <p className="mt-0.5 text-[10px] leading-none text-[var(--color-fg-muted)] lg:text-[11px]">
+                  <p className="mt-0.5 text-[9px] leading-none text-[var(--color-fg-muted)] md:text-[10px] lg:text-[11px]">
                     {Math.max(count, cat.slug === "driver" ? 6 : 1)} Cars
                   </p>
                 </Link>
