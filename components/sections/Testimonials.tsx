@@ -31,7 +31,12 @@ function SourceIcon({ source }: { source: string }) {
   };
   const s = map[source] ?? { bg: "bg-[var(--color-fg-dim)]", label: "?" };
   return (
-    <span className={cn("flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-bold text-white", s.bg)}>
+    <span
+      className={cn(
+        "flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-bold text-white",
+        s.bg,
+      )}
+    >
       {s.label}
     </span>
   );
@@ -54,7 +59,10 @@ export function Testimonials() {
       aria-labelledby="testimonials-heading"
     >
       <div className="container">
-        <h2 id="testimonials-heading" className="mb-5 text-[clamp(1.25rem,1.05rem+0.55vw,1.55rem)] font-semibold tracking-[0] text-[var(--color-fg)]">
+        <h2
+          id="testimonials-heading"
+          className="mb-5 text-[clamp(1.25rem,1.05rem+0.55vw,1.55rem)] font-semibold tracking-[0] text-[var(--color-fg)]"
+        >
           What Our Customers Say
         </h2>
 
@@ -62,7 +70,11 @@ export function Testimonials() {
         <div className="mb-6 overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface-2)]">
           <div className="flex flex-col gap-4 p-4 md:flex-row md:items-center md:justify-between md:p-5">
             {/* Source tabs */}
-            <div role="tablist" aria-label="Review source" className="flex flex-wrap items-center gap-x-1 gap-y-2">
+            <div
+              role="tablist"
+              aria-label="Review source"
+              className="flex flex-wrap items-center gap-x-1 gap-y-2"
+            >
               {TABS.map((t) => {
                 const active = tab === t.id;
                 return (
@@ -75,7 +87,7 @@ export function Testimonials() {
                       "inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors",
                       active
                         ? "border-b-2 border-[var(--color-fg)] text-[var(--color-fg)]"
-                        : "text-[var(--color-fg-muted)] hover:text-[var(--color-fg)]"
+                        : "text-[var(--color-fg-muted)] hover:text-[var(--color-fg)]",
                     )}
                   >
                     {"icon" in t && t.icon && (
@@ -90,15 +102,26 @@ export function Testimonials() {
             {/* Aggregate + CTA */}
             <div className="flex flex-wrap items-center gap-4">
               <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold text-[var(--color-fg)]">Excellent</span>
-                <div className="flex items-center gap-0.5" aria-label={`Rated ${testimonialsAggregate.rating} out of 5`}>
+                <span className="text-sm font-semibold text-[var(--color-fg)]">
+                  Excellent
+                </span>
+                <div
+                  className="flex items-center gap-0.5"
+                  aria-label={`Rated ${testimonialsAggregate.rating} out of 5`}
+                >
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={14} className="fill-[var(--color-star)] text-[var(--color-star)]" />
+                    <Star
+                      key={i}
+                      size={14}
+                      className="fill-[var(--color-star)] text-[var(--color-star)]"
+                    />
                   ))}
                 </div>
-                <span className="text-sm font-bold text-[var(--color-fg)]">{testimonialsAggregate.rating}</span>
+                <span className="text-sm font-bold text-[var(--color-fg)]">
+                  {testimonialsAggregate.rating}
+                </span>
                 <span className="text-sm text-[var(--color-fg-muted)]">
-                  {testimonialsAggregate.count.toLocaleString()} reviews
+                  {testimonialsAggregate.count.toLocaleString("en-US")} reviews
                 </span>
               </div>
               <button
@@ -146,32 +169,49 @@ export function Testimonials() {
                       <span
                         className={cn(
                           "flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-semibold text-white",
-                          AVATAR_BG[i % AVATAR_BG.length]
+                          AVATAR_BG[i % AVATAR_BG.length],
                         )}
                         aria-hidden
                       >
                         {t.initials}
                       </span>
                       <div className="min-w-0">
-                        <p className="truncate text-sm font-semibold text-[var(--color-fg)]">{t.name}</p>
-                        <p className="text-xs text-[var(--color-fg-dim)]">{t.date}</p>
+                        <p className="truncate text-sm font-semibold text-[var(--color-fg)]">
+                          {t.name}
+                        </p>
+                        <p className="text-xs text-[var(--color-fg-dim)]">
+                          {t.date}
+                        </p>
                       </div>
                     </div>
                     <SourceIcon source={t.source} />
                   </div>
 
                   <div className="flex items-center gap-1.5">
-                    <div className="flex items-center gap-0.5" aria-label={`Rated ${t.rating} out of 5`}>
+                    <div
+                      className="flex items-center gap-0.5"
+                      aria-label={`Rated ${t.rating} out of 5`}
+                    >
                       {[...Array(5)].map((_, idx) => (
                         <Star
                           key={idx}
                           size={13}
-                          className={idx < t.rating ? "fill-[var(--color-star)] text-[var(--color-star)]" : "text-[var(--color-border-strong)]"}
+                          className={
+                            idx < t.rating
+                              ? "fill-[var(--color-star)] text-[var(--color-star)]"
+                              : "text-[var(--color-border-strong)]"
+                          }
                         />
                       ))}
                     </div>
                     <span className="inline-flex items-center gap-0.5 text-[11px] font-medium text-[#4285f4]">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-hidden
+                      >
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                       </svg>
                       Verified
